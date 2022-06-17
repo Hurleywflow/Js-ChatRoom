@@ -1,0 +1,26 @@
+{
+  "name": "codechallenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint  .",
+    "lint-fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "updtr": "^4.0.0"
+  },
+  "dependencies": {
+    "firebase": "^9.8.3"
+  }
+}
