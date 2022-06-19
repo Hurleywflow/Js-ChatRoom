@@ -22,6 +22,7 @@ newChatForm.addEventListener('submit', (e) => {
 userNameForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const newName = userNameForm.name.value.trim();
+  /* Updating the username in the database. */
   chatrooms.updateUsername(newName);
   // reset form
   userNameForm.reset();
@@ -40,3 +41,4 @@ const chatrooms = new Chatroom('gaming', 'John');
 chatrooms.getCHats((data) => {
   chatUI.render(data);
 });
+
