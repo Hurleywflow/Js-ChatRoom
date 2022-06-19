@@ -3,6 +3,9 @@ class ChatUI {
   constructor(list) {
     this.list = list;
   }
+  clear() {
+    this.list.innerHTML = '';
+  }
   // render the chat
   render(data) {
     // format date time look better for the user

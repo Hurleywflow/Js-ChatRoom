@@ -17,8 +17,7 @@ class Chatroom {
       created_at: firebase.firestore.Timestamp.fromDate(now)
     };
     // add to database
-    const response = await this.chats.add(chat);
-    return response;
+    return this.chats.add(chat);
   }
   // get the chats from the database
   getCHats(callback) {
@@ -38,6 +37,8 @@ class Chatroom {
   // update the username
   updateUsername(username) {
     this.username = username;
+    // set username to local storage
+    localStorage.setItem('username', username);
   }
   // update the room
   updateRoom(room) {
@@ -57,9 +58,8 @@ chatroom.getCHats((data) => {
 setTimeout(() => {
   chatroom.updateRoom('general');
   chatroom.updateUsername('Hurley');
-  chatroom.getCHats((data, id) => {
+  chatroom.getCHats((data) => {
     console.log(data);
-    console.log(id);
   });
   chatroom.addChat('Hello');
 }, 3000);
